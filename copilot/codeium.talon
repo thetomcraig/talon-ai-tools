@@ -9,7 +9,7 @@ pilot (previous | last): user.vscode("editor.action.inlineSuggest.showPrevious")
 pilot next: user.vscode("editor.action.inlineSuggest.showNext")
 
 pilot yes: user.vscode("editor.action.inlineSuggest.commit")
-pilot nope: user.vscode("editor.action.inlineSuggest.undo")
+pilot no: user.vscode("editor.action.inlineSuggest.undo")
 
 pilot chat [<user.prose>]:
     user.vscode("codeium.openChatView")
