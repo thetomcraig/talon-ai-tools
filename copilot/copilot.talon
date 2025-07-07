@@ -26,7 +26,9 @@ pilot new | chat new:
     user.vscode("workbench.action.chat.openInSidebar")
     sleep(200ms)
     user.vscode("workbench.action.chat.newChat")
+(pilot | chat) inline | chat ask:
+    user.vscode("inlineChat.start)
 pilot {user.copilot_slash_command} <user.cursorless_target> [to <user.prose>]$:
     user.cursorless_command("setSelection", cursorless_target)
     user.copilot_inline_chat(copilot_slash_command or "", prose or "")
-pilot make [<user.prose>]: user.copilot_inline_chat("", prose or "")
+(chat ask | pilot make) [<user.prose>]: user.copilot_inline_chat("", prose or "")
