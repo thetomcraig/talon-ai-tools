@@ -2,9 +2,14 @@ app: vscode
 not tag: user.codeium
 -
 pilot jest: user.vscode("editor.action.inlineSuggest.trigger")
-pilot next: user.vscode("editor.action.inlineSuggest.showNext")
-pilot (previous | last): user.vscode("editor.action.inlineSuggest.showPrevious")
-pilot yes: user.vscode("editor.action.inlineSuggest.commit")
+
+# pilot next: user.vscode("editor.action.inlineSuggest.showNext")
+pilot next: user.vscode("chatEditor.action.navigateNext")
+# pilot (previous | last): user.vscode("editor.action.inlineSuggest.showPrevious")
+pilot (previous | last): user.vscode("chatEditor.action.navigatePrevious")
+# pilot yes: user.vscode("editor.action.inlineSuggest.commit")
+pilot yes: user.vscode("chatEditor.action.acceptHunk")
+
 pilot yes word: user.vscode("editor.action.inlineSuggest.acceptNextWord")
 pilot no: user.vscode("editor.action.inlineSuggest.undo")
 pilot cancel: user.vscode("editor.action.inlineSuggest.hide")
